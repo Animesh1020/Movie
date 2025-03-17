@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sci-Fi Movies | Movie Night Selection</title>
+  <link rel="stylesheet" href="sci-fi.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Sci-Fi Movies</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a sci-fi movie...">
+        <button id="searchBtn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="intro-section">
+      <h2>Explore The Unknown</h2>
+      <p>Step into the future and explore the unknown with these epic sci-fi films. From space exploration to dystopian futures, mind-bending time travel to artificial intelligence, we've got something to expand your imagination!</p>
+    </div>
+    
+    <!-- <div class="filter-section">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="space">Space</button>
+      <button class="filter-btn" data-filter="dystopian">Dystopian</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+    </div> -->
+   
+    <div class="card-container">
+      <div class="card" data-category="space" onclick="showMovieDetails('scifi1')">
+        <div class="card-image">
+          <img src="images/sci-fi1.jpg" alt="Interstellar">
+          <div class="rating">9.3</div>
+        </div>
+        <div class="card-content">
+          <h4>Interstellar</h4>
+          <p class="year">2014</p>
+          <p class="description">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/detail/0PUNMGZEWOMYFKR1XIGOLTL2YM/ref=atv_sr_fle_c_srce7a38_1_1_1?sr=1-1&pageTypeIdSource=ASIN&pageTypeId=B0CQZ5KK5X&qid=1742205587650')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="dystopian" onclick="showMovieDetails('scifi2')">
+        <div class="card-image">
+          <img src="images/sci-fi2.jpg" alt="Blade Runner 2049">
+          <div class="rating">8.9</div>
+        </div>
+        <div class="card-content">
+          <h4>Inception</h4>
+          <p class="year">2010</p>
+          <p class="description">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/detail/0KN3PDZAGPSCED6GLROBJP5A5X/ref=atv_ge_ags_1_c_hUhMb1_brws_1_2?jic=8%7CEgRzdm9k')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="ai" onclick="showMovieDetails('scifi3')">
+        <div class="card-image">
+          <img src="images/sci-fi3.jpg" alt="Ex Machina">
+          <div class="rating">7.7</div>
+        </div>
+        <div class="card-content">
+          <h4>Gravity</h4>
+          <p class="year">2013</p>
+          <p class="description">Dr Ryan Stone, an engineer on her first space mission, and Matt Kowalski, an astronaut on his final expedition, have to survive in space after they are hit ...</p>
+          <button onclick="redirectTo('https://www.primevideo.com/detail/0MW3B1AN9EBQN5F5825WH831MA/ref=atv_sr_fle_c_srce7a38_3_1_3?sr=1-3&pageTypeIdSource=ASIN&pageTypeId=B0D38DBQ7L&qid=1742206156276')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="space" onclick="showMovieDetails('scifi4')">
+        <div class="card-image">
+          <img src="images/sci-fi4.jpg" alt="The Martian">
+          <div class="rating">6.1</div>
+        </div>
+        <div class="card-content">
+          <h4>The Electric State</h4>
+          <p class="year">2025</p>
+          <p class="description">An orphaned teenager traverses the American West with a sweet, but mysterious, robot, and an eccentric drifter in search of her younger brother.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/dp/amzn1.dv.gti.96a9f66f-ebc6-babe-8f4a-9209c94c29e9?autoplay=0&ref_=atv_cf_strg_wb')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="dystopian" onclick="showMovieDetails('scifi5')">
+        <div class="card-image">
+          <img src="images/sci-fi5.jpg" alt="Mad Max: Fury Road">
+          <div class="rating">5.8</div>
+        </div>
+        <div class="card-content">
+          <h4>Geostorm</h4>
+          <p class="year">2017</p>
+          <p class="description">When catastrophic climate change endangers Earth's very survival, world governments unite and create the Dutch Boy Program: a worldwide net of satellites ...</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/80185871?trackId=251106966&tctx=2%2C1%2Ca1d109fc-db54-4f7a-9910-67af9bf9641e-318249065%2CNES_C660A42CEA72122F49E2B2B8118FE4-776EE534577B38-1208BDAEB6_p_1742206393581%2CNES_C660A42CEA72122F49E2B2B8118FE4_p_1742206393581%2C%2C%2C%2C80185871%2CVideo%3A80185871%2CminiDpPlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="ai" onclick="showMovieDetails('scifi6')">
+        <div class="card-image">
+          <img src="images/sci-fi6.jpg" alt="Her">
+          <div class="rating">7.9</div>
+        </div>
+        <div class="card-content">
+          <h4>Edge of Tomorrow</h4>
+          <p class="year">2014</p>
+          <p class="description">A man fighting in a war against aliens must relive the same day every time he dies until he can find a way to stop their power source with the help of an elite ...</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/70298735?trackId=13212365&tctx=2%2C5%2Ca1d109fc-db54-4f7a-9910-67af9bf9641e-318249065%2CNES_C660A42CEA72122F49E2B2B8118FE4-776EE534577B38-1208BDAEB6_p_1742206393581%2CNES_C660A42CEA72122F49E2B2B8118FE4_p_1742206393581%2C%2C%2C%2C80185871%2CVideo%3A70298735%2CdetailsPageCollection')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <!-- <div class="card" data-category="space" onclick="showMovieDetails('scifi7')">
+        <div class="card-image">
+          <img src="images/scifi7.png" alt="Arrival">
+          <div class="rating">8.4</div>
+        </div>
+        <div class="card-content">
+          <h4>Arrival</h4>
+          <p class="year">2016</p>
+          <p class="description">A linguist is recruited by the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/dp/amzn1.dv.gti.96a9f66f-ebc6-babe-8f4a-9209c94c29e9?autoplay=0&ref_=atv_cf_strg_wb')" class="watch-btn">Watch Now</button>
+        </div>
+      </div> -->
+      
+      <!-- <div class="card" data-category="dystopian" onclick="showMovieDetails('scifi8')">
+        <div class="card-image">
+          <img src="images/scifi8.png" alt="Children of Men">
+          <div class="rating">8.7</div>
+        </div>
+        <div class="card-content">
+          <h4>Children of Men</h4>
+          <p class="year">2006</p>
+          <p class="description">In a chaotic world in which women have become somehow infertile, a former activist agrees to help transport a miraculously pregnant woman to a sanctuary at sea.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/dp/amzn1.dv.gti.96a9f66f-ebc6-babe-8f4a-9209c94c29e9?autoplay=0&ref_=atv_cf_strg_wb')" class="watch-btn">Watch Now</button>
+        </div>
+      </div> -->
+      
+      <!-- <div class="card" data-category="ai" onclick="showMovieDetails('scifi9')">
+        <div class="card-image">
+          <img src="images/scifi9.png" alt="2001: A Space Odyssey">
+          <div class="rating">9.0</div>
+        </div>
+        <div class="card-content">
+          <h4>2001: A Space Odyssey</h4>
+          <p class="year">1968</p>
+          <p class="description">After discovering a mysterious artifact buried beneath the Lunar surface, mankind sets off on a quest to find its origins with help from intelligent supercomputer HAL 9000.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/dp/amzn1.dv.gti.96a9f66f-ebc6-babe-8f4a-9209c94c29e9?autoplay=0&ref_=atv_cf_strg_wb')" class="watch-btn">Watch Now</button>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Movie Details Modal -->
+  <!-- <div id="movie-details-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <div class="modal-rating" id="modal-rating"></div>
+      </div>
+      <div class="modal-body">
+        <img id="modal-image" src="" alt="Movie Poster">
+        <div class="modal-info">
+          <p id="modal-year"></p>
+          <p id="modal-description"></p>
+          <button class="watch-trailer-btn">Watch Trailer</button>
+          <button class="add-to-list-btn">Add to Watchlist</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  <footer>
+    <div class="footer-content">
+      <div class="back-to-categories" onclick="window.location.href='type.html'">
+        ← Back to Categories
+      </div>
+      <p>&copy; 2025 Movie Night. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Redirect function
+    function redirectTo(url) {
+      window.open(url, "_blank");
+    }
+    
+    // Movie details modal
+    function showMovieDetails(movieId) {
+      const modal = document.getElementById('movie-details-modal');
+      modal.style.display = 'flex';
+      
+      // In a real application, you would fetch movie details based on the movieId
+      // For demo purposes, we'll just show placeholder content
+      document.getElementById('modal-title').textContent = event.currentTarget.querySelector('h4').textContent;
+      document.getElementById('modal-image').src = event.currentTarget.querySelector('img').src;
+      document.getElementById('modal-rating').textContent = event.currentTarget.querySelector('.rating').textContent;
+      document.getElementById('modal-description').textContent = event.currentTarget.querySelector('.description').textContent;
+      document.getElementById('modal-year').textContent = 'Year: ' + event.currentTarget.querySelector('.year').textContent;
+    }
+    
+    // Close modal when clicking the close button
+    document.querySelector('.close-btn').addEventListener('click', function() {
+      document.getElementById('movie-details-modal').style.display = 'none';
+    });
+    
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('movie-details-modal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+    
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Search functionality
+    document.getElementById('searchBtn').addEventListener('click', function() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      document.querySelectorAll('.card').forEach(card => {
+        const title = card.querySelector('h4').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+    
+    // Run search on Enter key press
+    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+      if (event.key === 'Enter') {
+        document.getElementById('searchBtn').click();
+      }
+    });
+    
+    // Add page load animation
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>

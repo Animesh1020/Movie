@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Night Invitation</title>
+  <link rel="stylesheet" href="movie.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="overlay"></div>
+  
+  <img class="img" src="images/bg.jpg" alt="Movie Night Background" loading="lazy">
+  
+  <div class="container">
+    <div class="content-wrapper">
+      <h1>Welcome To Our Movie Night</h1>
+      <p class="tagline">An unforgettable cinematic experience awaits you</p>
+      
+      <div class="live-datetime">
+        <div id="current-date">Loading date...</div>
+        <div id="current-time">Loading time...</div>
+      </div>
+      
+      <button id="invitation-btn" onclick="openNewPage()">
+        <span class="btn-text">Accept the Invitation</span>
+        <span class="btn-icon">→</span>
+      </button>
+    </div>
+    
+    <div class="event-info">
+      <!-- <p>Saturday, March 22 • 8:00 PM</p> -->
+    </div>
+  </div>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      
+      const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const formattedDate = now.toLocaleDateString('en-US', dateOptions);
+      
+      const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+      const formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+      
+      document.getElementById('current-date').textContent = formattedDate;
+      document.getElementById('current-time').textContent = formattedTime;
+    }
+    
+    function openNewPage() {
+      document.getElementById('invitation-btn').classList.add('clicked');
+      
+      setTimeout(() => {
+        window.open('type.html', '_blank');
+      }, 300);
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+      
+      updateDateTime();
+      
+      setInterval(updateDateTime, 1000);
+    });
+  </script>
+</body>
+</html>

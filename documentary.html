@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentary Movies | Movie Night Selection</title>
+  <link rel="stylesheet" href="documentary.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Documentary Movies</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a documentary...">
+        <button id="searchBtn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="intro-section">
+      <h2>Discover The Truth</h2>
+      <p>Explore the world with these insightful documentaries. From nature and history to social issues and science, we've got something to expand your horizons and challenge your thinking!</p>
+    </div>
+    
+    <!-- <div class="filter-section">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="history">History</button>
+      <button class="filter-btn" data-filter="social">Social Issues</button>
+    </div> -->
+
+    <div class="card-container">
+      <div class="card" data-category="nature" onclick="showMovieDetails('doc1')">
+        <div class="card-image">
+          <img src="images/documentary1.jpg" alt="Planet Earth">
+          <div class="rating">6.5</div>
+        </div>
+        <div class="card-content">
+          <h4>Mumbai Mafia</h4>
+          <p class="year">2023</p>
+          <p class="description">Mumbai Mafia: Police vs The Underworld is a 2023 Netflix documentary film produced by Morgan Matthews and Sophie Jones and directed by Raaghav Dar and Francis ...</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81384842?trackId=268410292&tctx=0%2C0%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-316572080%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-316572080%7C2%2Cunknown%2C%2C%2CtitlesResults%2C81384842%2CVideo%3A81384842%2CminiDpPlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="history" onclick="showMovieDetails('doc2')">
+        <div class="card-image">
+          <img src="images/documentary2.jpg" alt="World War II in Color">
+          <div class="rating">7.9</div>
+        </div>
+        <div class="card-content">
+          <h4>The Hunt for Veerappan</h4>
+          <p class="year">2023</p>
+          <p class="description">The Hunt for Veerappan: A poacher who conquered the jungles of South India and became the subject of the biggest manhunt of India.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81258696?trackId=268410292')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="social" onclick="showMovieDetails('doc3')">
+        <div class="card-image">
+          <img src="images/documentary3.jpg" alt="13th">
+          <div class="rating">6.7</div>
+        </div>
+        <div class="card-content">
+          <h4>Curry & Cyanide</h4>
+          <p class="year">2023</p>
+          <p class="description"> The Jolly Joseph Case is a true crime documentary directed by Christopher Tomy, investigating six deaths in the same family and the woman ...</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81564452?trackId=13212365&tctx=0%2C4%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-317026641%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-317026641%7C2%2Cunknown%2C%2C%2CtitlesResults%2C81384842%2CVideo%3A81564452%2CdetailsPageCollection')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="nature" onclick="showMovieDetails('doc4')">
+        <div class="card-image">
+          <img src="images/documentary4.jpg" alt="My Octopus Teacher">
+          <div class="rating">7.6</div>
+        </div>
+        <div class="card-content">
+          <h4>To Kill A Tiger</h4>
+          <p class="year">2024</p>
+          <p class="description">A farmer in India takes on the fight of his life when he demands justice for his 13-year-old daughter, the victim of a brutal gang rape.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81766865?trackId=13212365&tctx=0%2C10%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-317026641%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-317026641%7C2%2C%2C%2C%2C%2C81384842%2CVideo%3A81766865%2CdetailsPageCollection')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="social" onclick="showMovieDetails('doc5')">
+        <div class="card-image">
+          <img src="images/documentary5.jpg" alt="The Social Dilemma">
+          <div class="rating">6.2</div>
+        </div>
+        <div class="card-content">
+          <h4>Capturing the Killer Nurse</h4>
+          <p class="year">2022</p>
+          <p class="description">This documentary reveals how investigators proved ICU nurse Charles Cullen was killing patients — and how close he came to getting away with murder.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81512108?trackId=13212365&tctx=0%2C14%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-317298727%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-317298727%7C2%2Cunknown%2C%2C%2CtitlesResults%2C81564452%2CVideo%3A81512108%2CdetailsPageCollection')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="history" onclick="showMovieDetails('doc6')">
+        <div class="card-image">
+          <img src="images/documentary6.jpg" alt="Apollo 11">
+          <div class="rating">7.1</div>
+        </div>
+        <div class="card-content">
+          <h4>The Tinder Swindler</h4>
+          <p class="year">2022</p>
+          <p class="description">Posing as a wealthy, jet-setting diamond mogul, he wooed women online, then conned them out of millions of dollars. Now some victims plan for payback.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81254340?trackId=13212365&tctx=0%2C20%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-317298727%2C246e7c37-97bd-41ba-baf9-fa4834f75e45-317298727%7C2%2C%2C%2C%2C%2C81564452%2CVideo%3A81254340%2CdetailsPageCollection')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="nature" onclick="showMovieDetails('doc7')">
+        <div class="card-image">
+          <img src="images/documentary7.jpg" alt="Blackfish">
+          <div class="rating">7.1</div>
+        </div>
+        <div class="card-content">
+          <h4>Crime Stories: India Detectives</h4>
+          <p class="year">2021</p>
+          <p class="description">Follows major criminal investigations from the time the crime is reported until the suspect gets captured.Follows major criminal investigations from the ...</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81004424?trackId=268410292')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="social" onclick="showMovieDetails('doc8')">
+        <div class="card-image">
+          <img src="images/documentary8.jpg" alt="Icarus">
+          <div class="rating">6.2</div>
+        </div>
+        <div class="card-content">
+          <h4>Indian Predator: Beast of Bangalore</h4>
+          <p class="year">2022</p>
+          <p class="description">A dangerous predator on the streets of Bangalore, lurking in the shadows leaving women feeling unsafe. He changed the whole landscape of this city.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81272123?trackId=268410292&tctx=0%2C0%2C7ac3b145-2189-4fd7-ba49-52cf1eafc576-316237687%2C7ac3b145-2189-4fd7-ba49-52cf1eafc576-316237687%7C2%2Cunknown%2C%2C%2CtitlesResults%2C%2CVideo%3A81610578%2CdetailsPagePlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="history" onclick="showMovieDetails('doc9')">
+        <div class="card-image">
+          <img src="images/documentary9.jpg" alt="They Shall Not Grow Old">
+          <div class="rating">9.6</div>
+        </div>
+        <div class="card-content">
+          <h4>CHAOS:Charles Manson</h4>
+          <p class="year">2018</p>
+          <p class="description">Charles Manson's followers killed on his command, without mercy or remorse. This documentary delves into mind control and murder amid a web of conspiracy</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81482892?trackId=13212365&tctx=0%2C17%2C7ac3b145-2189-4fd7-ba49-52cf1eafc576-316237687%2C7ac3b145-2189-4fd7-ba49-52cf1eafc576-316237687%7C2%2C%2C%2C%2C%2C81610578%2CVideo%3A81482892%2CdetailsPageCollection')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="nature" onclick="showMovieDetails('doc10')">
+        <div class="card-image">
+          <img src="images/documentary10.jpg" alt="March of the Penguins">
+          <div class="rating">6.1</div>
+        </div>
+        <div class="card-content">
+          <h4>Indian Predator: The Butcher of Delhi</h4>
+          <p class="year">2022</p>
+          <p class="description">The Butcher of Delhi ... A series of mutilated bodies and taunting notes left outside a Delhi jail sends police hunting for a seasoned killer ...</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81272117?trackId=268410292')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Movie Details Modal -->
+  <!-- <div id="movie-details-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <div class="modal-rating" id="modal-rating"></div>
+      </div>
+      <div class="modal-body">
+        <img id="modal-image" src="" alt="Movie Poster">
+        <div class="modal-info">
+          <p id="modal-year"></p>
+          <p id="modal-description"></p>
+          <button class="watch-trailer-btn">Watch Trailer</button>
+          <button class="add-to-list-btn">Add to Watchlist</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  <footer>
+    <div class="footer-content">
+      <div class="back-to-categories" onclick="window.location.href='type.html'">
+        ← Back to Categories
+      </div>
+      <p>&copy; 2025 Movie Night. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Redirect function
+    function redirectTo(url) {
+      window.open(url, "_blank");
+    }
+    
+    // Movie details modal
+    function showMovieDetails(movieId) {
+      const modal = document.getElementById('movie-details-modal');
+      modal.style.display = 'flex';
+      
+      // In a real application, you would fetch movie details based on the movieId
+      // For demo purposes, we'll just show placeholder content
+      document.getElementById('modal-title').textContent = event.currentTarget.querySelector('h4').textContent;
+      document.getElementById('modal-image').src = event.currentTarget.querySelector('img').src;
+      document.getElementById('modal-rating').textContent = event.currentTarget.querySelector('.rating').textContent;
+      document.getElementById('modal-description').textContent = event.currentTarget.querySelector('.description').textContent;
+      document.getElementById('modal-year').textContent = 'Year: ' + event.currentTarget.querySelector('.year').textContent;
+    }
+    
+    // Close modal when clicking the close button
+    document.querySelector('.close-btn').addEventListener('click', function() {
+      document.getElementById('movie-details-modal').style.display = 'none';
+    });
+    
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('movie-details-modal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+    
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Search functionality
+    document.getElementById('searchBtn').addEventListener('click', function() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      document.querySelectorAll('.card').forEach(card => {
+        const title = card.querySelector('h4').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+    
+    // Run search on Enter key press
+    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+      if (event.key === 'Enter') {
+        document.getElementById('searchBtn').click();
+      }
+    });
+    
+    // Add page load animation
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.85;
+  z-index: -1;
+  filter: brightness(0.7) contrast(1.1);
+  transition: transform 10s ease;
+  animation: subtle-zoom 20s infinite alternate;
+}
+
+@keyframes subtle-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* Title Styling */
+h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 10px rgba(255, 0, 0, 0.7), 
+               0px 0px 20px yellow,
+               0px 0px 40px rgba(255, 69, 0, 0.4);
+  letter-spacing: 3px;
+  margin-bottom: 35px;
+  position: relative;
+  animation: title-glow 3s infinite alternate;
+}
+
+@keyframes title-glow {
+  from { text-shadow: 4px 4px 10px rgba(255, 0, 0, 0.7), 0px 0px 20px yellow; }
+  to { text-shadow: 4px 4px 15px rgba(255, 0, 0, 0.9), 0px 0px 30px yellow, 0px 0px 50px rgba(255, 255, 0, 0.4); }
+}
+
+/* Decorative elements */
+h1::before, h1::after {
+  content: "★";
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffcc00;
+  animation: star-twinkle 1.5s infinite alternate;
+}
+
+h1::before {
+  left: -40px;
+  animation-delay: 0.2s;
+}
+
+h1::after {
+  right: -40px;
+  animation-delay: 0.7s;
+}
+
+@keyframes star-twinkle {
+  0% { opacity: 0.3; transform: translateY(-50%) scale(0.8); }
+  100% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+}
+
+/* Movie-Themed Button */
+button {
+  padding: 16px 32px;
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ffcc00, #ff8800);
+  color: #111;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0px 4px 15px rgba(255, 69, 0, 0.6), 
+              0px 0px 30px rgba(255, 204, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Enhanced marquee effect */
+button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff4500, #ff0000);
+  color: white;
+  transform: translateY(-7px);
+  box-shadow: 0px 10px 25px rgba(255, 69, 0, 0.8),
+              0px 0px 40px rgba(255, 204, 0, 0.6);
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+/* Add cinematic border */
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffcc00, #ff4500) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+button:hover::after {
+  opacity: 1;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+  
+  h1::before, h1::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+.live-datetime {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+}
+
+#current-date {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #ffcc00;
+}
+
+#current-time {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}

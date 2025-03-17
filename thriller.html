@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thriller Movies | Movie Night Selection</title>
+  <link rel="stylesheet" href="thriller.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Thriller Movies</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+        <button id="searchBtn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="intro-section">
+      <h2>Edge of Your Seat</h2>
+      <p>Select a thriller movie to watch together. From psychological suspense to heart-pounding action, we've got something to keep you on the edge of your seat all night!</p>
+    </div>
+    
+
+    <div class="card-container">
+      <div class="card" data-category="psychological" onclick="showMovieDetails('movie1')">
+        <div class="card-image">
+          <img src="images/thriller1.jpg" alt="The Silence of the Lambs">
+          <div class="rating">6.1</div>
+        </div>
+        <div class="card-content">
+          <h4>No Exit</h4>
+          <p class="year">2022</p>
+          <p class="description">During a blizzard and stranded at an isolated highway rest stop in the mountains, a college student discovers a kidnapped child hidden in a car.</p>
+          <button onclick="redirectTo('https://www.hotstar.com/in/movies/no-exit/1260097234/watch?utm_source=gwa')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="action" onclick="showMovieDetails('movie2')">
+        <div class="card-image">
+          <img src="images/thriller2.jpg" alt="Die Hard">
+          <div class="rating">7.0</div>
+        </div>
+        <div class="card-content">
+          <h4>The Gift</h4>
+          <p class="year">2015</p>
+          <p class="description">A married couple, Simon and Robyn, run into Gordo, an old classmate. Things take a turn when Gordo begins to drop in unannounced at their house and ...</p>
+          <button onclick="redirectTo('https://www.primevideo.com/dp/amzn1.dv.gti.60b7fab9-b42e-599b-cafd-1adb7163c5a0?autoplay=0&ref_=atv_cf_strg_wb')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="mystery" onclick="showMovieDetails('movie3')">
+        <div class="card-image">
+          <img src="images/thriller3.jpg" alt="Seven">
+          <div class="rating">6.9</div>
+        </div>
+        <div class="card-content">
+          <h4>Game Over</h4>
+          <p class="year">2019</p>
+          <p class="description">Two detectives track a serial killer who uses the seven deadly sins as his motives.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81151880?trackId=268410292&tctx=0%2C1%2C014e4124-8ec2-40cd-b449-0804c261a7d2-310888884%2C014e4124-8ec2-40cd-b449-0804c261a7d2-310888884%7C2%2Cunknown%2C%2C%2CtitlesResults%2C81151880%2CVideo%3A81151880%2CminiDpPlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="psychological" onclick="showMovieDetails('movie4')">
+        <div class="card-image">
+          <img src="images/thriller4.jpg" alt="Shutter Island">
+          <div class="rating">8.2</div>
+        </div>
+        <div class="card-content">
+          <h4>Shutter Island</h4>
+          <p class="year">2010</p>
+          <p class="description">A U.S. Marshal investigates the disappearance of a murderess who escaped from a hospital for the criminally insane.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/dp/amzn1.dv.gti.96a9f66f-ebc6-babe-8f4a-9209c94c29e9?autoplay=0&ref_=atv_cf_strg_wb')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="action" onclick="showMovieDetails('movie5')">
+        <div class="card-image">
+          <img src="images/thriller5.jpg" alt="The Bourne Identity">
+          <div class="rating">7.2</div>
+        </div>
+        <div class="card-content">
+          <h4>Te3n</h4>
+          <p class="year">2016</p>
+          <p class="description">A grandfather, a priest, and a police officer investigate the case of a kidnapped child.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/dp/amzn1.dv.gti.20b9ac9c-a191-aca9-07db-12260d5d8caa?autoplay=0&ref_=atv_cf_strg_wb')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="mystery" onclick="showMovieDetails('movie6')">
+        <div class="card-image">
+          <img src="images/thriller6.jpg" alt="Gone Girl">
+          <div class="rating">7.2</div>
+        </div>
+        <div class="card-content">
+          <h4>Ittefaq</h4>
+          <p class="year">2017</p>
+          <p class="description">A police officer is investigating a double murder case that has only two witnesses, who are also the prime suspects.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/80164904?trackId=268410292&tctx=0%2C2%2C7ac3b145-2189-4fd7-ba49-52cf1eafc576-311754549%2C7ac3b145-2189-4fd7-ba49-52cf1eafc576-311754549%7C2%2Cunknown%2C%2C%2CtitlesResults%2C80164904%2CVideo%3A80164904%2CminiDpPlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="psychological" onclick="showMovieDetails('movie7')">
+        <div class="card-image">
+          <img src="images/thriller7.jpg" alt="Memento">
+          <div class="rating">6.7</div>
+        </div>
+        <div class="card-content">
+          <h4>Curry & Cyanide</h4>
+          <p class="year">2023</p>
+          <p class="description">The real life case of Jolly Joseph, a lady suspected of planning the cyanide poisoning of six family members over more than ten years, including a two-year-old ...</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81564452?trackId=281468046&tctx=3%2C21%2Cb938566c-210e-4a87-bb4d-c57283302c36-312715339%2Cb938566c-210e-4a87-bb4d-c57283302c36-312715339%7C1%2Cunknown%2C%2C%2CsuggestionTitlesResults%2C81564452%2CVideo%3A81564452%2CminiDpPlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="action" onclick="showMovieDetails('movie8')">
+        <div class="card-image">
+          <img src="images/thriller8.jpg" alt="The Departed">
+          <div class="rating">6.8</div>
+        </div>
+        <div class="card-content">
+          <h4>Forensic</h4>
+          <p class="year">2020</p>
+          <p class="description">An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81289660?trackId=281468046&tctx=6%2C38%2Cb938566c-210e-4a87-bb4d-c57283302c36-312715339%2Cb938566c-210e-4a87-bb4d-c57283302c36-312715339%7C1%2Cunknown%2C%2C%2CsuggestionTitlesResults%2C%2CVideo%3A81289660%2CdetailsPagePlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="mystery" onclick="showMovieDetails('movie9')">
+        <div class="card-image">
+          <img src="images/thriller9.jpg" alt="Prisoners">
+          <div class="rating">6.8</div>
+        </div>
+        <div class="card-content">
+          <h4>HIT: The First Case</h4>
+          <p class="year">2022</p>
+          <p class="description">When his daughter and her friend go missing, a man takes matters into his own hands as the police pursue multiple leads.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81436989?trackId=13212365&tctx=4%2C0%2Cb938566c-210e-4a87-bb4d-c57283302c36-312715339%2Cb938566c-210e-4a87-bb4d-c57283302c36-312715339%7C1%2Cunknown%2C%2C%2CsuggestionTitlesResults%2C81076113%2CVideo%3A81436989%2CdetailsPageCollection')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="psychological" onclick="showMovieDetails('movie10')">
+        <div class="card-image">
+          <img src="images/thriller10.jpg" alt="Get Out">
+          <div class="rating">6.5</div>
+        </div>
+        <div class="card-content">
+          <h4>Gerald's Game</h4>
+          <p class="year">2017</p>
+          <p class="description">A couple tries to spice up their marriage in a remote lake house. After the husband dies unexpectedly, the wife is left handcuffed to their bed frame.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/80128722?trackId=268410292&tctx=0%2C0%2Cb938566c-210e-4a87-bb4d-c57283302c36-313476980%2Cb938566c-210e-4a87-bb4d-c57283302c36-313476980%7C2%2C%2C%2C%2C%2C80128722%2CVideo%3A80128722%2C')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+    </div>
+    
+   
+  
+  <footer>
+    <div class="footer-content">
+      <div class="back-to-categories" onclick="window.location.href='type.html'">
+        ← Back to Categories
+      </div>
+      <p>&copy; 2025 Movie Night. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Redirect function
+    function redirectTo(url) {
+      window.open(url, "_blank");
+    }
+    
+    // Movie details modal
+    function showMovieDetails(movieId) {
+      const modal = document.getElementById('movie-details-modal');
+      modal.style.display = 'flex';
+      
+      // In a real application, you would fetch movie details based on the movieId
+      // For demo purposes, we'll just show placeholder content
+      document.getElementById('modal-title').textContent = event.currentTarget.querySelector('h4').textContent;
+      document.getElementById('modal-image').src = event.currentTarget.querySelector('img').src;
+      document.getElementById('modal-rating').textContent = event.currentTarget.querySelector('.rating').textContent;
+      document.getElementById('modal-description').textContent = event.currentTarget.querySelector('.description').textContent;
+      document.getElementById('modal-year').textContent = 'Year: ' + event.currentTarget.querySelector('.year').textContent;
+    }
+    
+    // Close modal when clicking the close button
+    document.querySelector('.close-btn').addEventListener('click', function() {
+      document.getElementById('movie-details-modal').style.display = 'none';
+    });
+    
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('movie-details-modal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+    
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Search functionality
+    document.getElementById('searchBtn').addEventListener('click', function() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      document.querySelectorAll('.card').forEach(card => {
+        const title = card.querySelector('h4').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+    
+    // Run search on Enter key press
+    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+      if (event.key === 'Enter') {
+        document.getElementById('searchBtn').click();
+      }
+    });
+    
+    // Add page load animation
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>

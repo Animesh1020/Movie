@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comedy Movies | Movie Night Selection</title>
+  <link rel="stylesheet" href="comedy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Comedy Movies</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+        <button id="searchBtn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="intro-section">
+      <h2>Laugh Out Loud</h2>
+      <p>Select a comedy movie to watch together. From classic slapstick to modern wit, we've got something to keep you laughing all night!</p>
+    </div>
+    
+    
+    <div class="card-container">
+      <div class="card" data-category="recent" onclick="showMovieDetails('movie1')">
+        <div class="card-image">
+          <img src="images/comedy1.jpg" alt="The Hangover">
+          <div class="rating">6.9</div>
+        </div>
+        <div class="card-content">
+          <h4>Ted</h4>
+          <p class="year">2012</p>
+          <p class="description">John Bennett is a grown man whose cherished teddy bear, Ted, came to life as the result of a childhood wish and has refused to leave his side ever since.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/70218756?trackId=268410292&tctx=0%2C0%2Ce8ccafef-3bc2-44d7-b681-ed0f1fd86e36-5388697%2Ce8ccafef-3bc2-44d7-b681-ed0f1fd86e36-5388697%7C2%2Cunknown%2C%2C%2CtitlesResults%2C70218756%2CVideo%3A70218756%2CminiDpPlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="classic" onclick="showMovieDetails('movie2')">
+        <div class="card-image">
+          <img src="images/comedy2.jpg" alt="Airplane!">
+          <div class="rating">8.2</div>
+        </div>
+        <div class="card-content">
+          <h4>
+            Zindagi Na Milegi Dobara</h4>
+          <p class="year">2011</p>
+          <p class="description">Three friends on an adventurous road trip/bachelor party in Spain learn some lessons about themselves and each other that will change them forever.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/70202336?trackId=251164867&tctx=1%2C5%2C8907c85b-a7e6-441c-82d5-d7fa06f65102-259769788%2CNES_FA8ACEC010FFBA96C8EDDEAB78FFD0-B57F24EA3FF60A-FEE71207A8_p_1742148364957%2CNES_FA8ACEC010FFBA96C8EDDEAB78FFD0_p_1742148364957%2C%2C%2C%2C%2CVideo%3A70202336%2CdetailsPagePlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="family" onclick="showMovieDetails('movie3')">
+        <div class="card-image">
+          <img src="images/comedy3.jpg" alt="Toy Story">
+          <div class="rating">6.4</div>
+        </div>
+        <div class="card-content">
+          <h4>Dhoom Dhaam</h4>
+          <p class="year">2025</p>
+          <p class="description">An oddball couple is thrust into a chaotic chase, dodging goons and cops in a frenzied hunt for the mysterious “Charlie.”</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81943001?trackId=251164867&tctx=1%2C4%2C8907c85b-a7e6-441c-82d5-d7fa06f65102-259769788%2CNES_FA8ACEC010FFBA96C8EDDEAB78FFD0-B57F24EA3FF60A-FEE71207A8_p_1742148364957%2CNES_FA8ACEC010FFBA96C8EDDEAB78FFD0_p_1742148364957%2C%2C%2C%2C%2CVideo%3A81943001%2CdetailsPagePlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="recent" onclick="showMovieDetails('movie4')">
+        <div class="card-image">
+          <img src="images/comedy4.jpg" alt="Bridesmaids">
+          <div class="rating">7.3</div>
+        </div>
+        <div class="card-content">
+          <h4>Bullet Train</h4>
+          <p class="year">2022</p>
+          <p class="description">Five assassins aboard a fast moving bullet train find out their missions have something in common.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81511779?trackId=268410292&tctx=0%2C0%2C8907c85b-a7e6-441c-82d5-d7fa06f65102-260696885%2C8907c85b-a7e6-441c-82d5-d7fa06f65102-260696885%7C2%2Cunknown%2C%2C%2CtitlesResults%2C%2CVideo%3A81511779%2CdetailsPagePlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="classic" onclick="showMovieDetails('movie5')">
+        <div class="card-image">
+          <img src="images/comedy5.jpg" alt="Ghostbusters">
+          <div class="rating">7.4</div>
+        </div>
+        <div class="card-content">
+          <h4>Monica, O My Darling</h4>
+          <p class="year">2022</p>
+          <p class="description">A slick robotics expert joins a murderous plot after a passionate affair takes a sudden turn, but nothing not even death , is what it seems to be.
+          </p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/81444027?trackId=253840049&tctx=6%2C5%2C8907c85b-a7e6-441c-82d5-d7fa06f65102-259777716%2CNES_FA8ACEC010FFBA96C8EDDEAB78FFD0-B8E5D79D30DEB9-FEE71207A8_p_1742148364957%2CNES_FA8ACEC010FFBA96C8EDDEAB78FFD0_p_1742148364957%2C%2C%2C%2C81444027%2CVideo%3A81444027%2CminiDpPlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="family" onclick="showMovieDetails('movie6')">
+        <div class="card-image">
+          <img src="images/comedy6.jpg" alt="Shrek">
+          <div class="rating">9.1</div>
+        </div>
+        <div class="card-content">
+          <h4>3 Idiots</h4>
+          <p class="year">2009</p>
+          <p class="description">3 Idiots is a movie starring Aamir Khan, Madhavan, and Mona Singh. Two friends are searching for their long lost companion.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/detail/0IMQLIS5J8EC6OLJBZAIAWY0XF/ref=atv_sr_fle_c_Tn74RA_19_1_26?sr=1-26&pageTypeIdSource=ASIN&pageTypeId=B0CN5395HW&qid=1742149942106')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="recent" onclick="showMovieDetails('movie7')">
+        <div class="card-image">
+          <img src="images/comedy7.jpg" alt="Superbad">
+          <div class="rating">8.4</div>
+        </div>
+        <div class="card-content">
+          <h4>Munna Bhai M.B.B.S.</h4>
+          <p class="year">2003</p>
+          <p class="description">The film follows Munna Bhai, a don in the Mumbai underworld, trying to please his father by pretending to be a doctor.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/detail/0G0YP3BEDRBLB01VVY6IVTVDP3/ref=atv_plr_search_play')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="classic" onclick="showMovieDetails('movie8')">
+        <div class="card-image">
+          <img src="images/comedy8.jpg" alt="The Big Lebowski">
+          <div class="rating">7.5</div>
+        </div>
+        <div class="card-content">
+          <h4>Lootcase</h4>
+          <p class="year">2020</p>
+          <p class="description">Nandan Kumar comes across a suitcase and discovers it is full of cash. He takes the suitcase and soon finds himself being chased by a notorious gangster, ...</p>
+          <button onclick="redirectTo('https://www.hotstar.com/in/movies/lootcase/1260028560/watch')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="family" onclick="showMovieDetails('movie9')">
+        <div class="card-image">
+          <img src="images/comedy9.jpg" alt="Home Alone">
+          <div class="rating">5.8</div>
+        </div>
+        <div class="card-content">
+          <h4>Pati Patni Aur Woh</h4>
+          <p class="year">2019</p>
+          <p class="description">Chintu Tyagi is an ordinary, middle class man who finds himself torn between his wife and another woman. love triangleaffair with married manbollywood.</p>
+          <button onclick="redirectTo('https://www.primevideo.com/dp/amzn1.dv.gti.22b9c0d0-0797-1f04-4ef8-029ab4bdeb48?autoplay=0&ref_=atv_cf_strg_wb')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+      
+      <div class="card" data-category="recent" onclick="showMovieDetails('movie10')">
+        <div class="card-image">
+          <img src="images/comedy10.jpg" alt="Crazy Rich Asians">
+          <div class="rating">8.1</div>
+        </div>
+        <div class="card-content">
+          <h4>Crazy Rich Asians</h4>
+          <p class="year">2018</p>
+          <p class="description">A woman discovers her boyfriend belongs to one of the richest families in Singapore.</p>
+          <button onclick="redirectTo('https://www.netflix.com/watch/80239019?trackId=268410292&tctx=0%2C0%2C794036a2-0a30-4568-9e6f-164451ec59ac-263682371%2C794036a2-0a30-4568-9e6f-164451ec59ac-263682371%7C2%2Cunknown%2C%2C%2CtitlesResults%2C%2CVideo%3A80239019%2CdetailsPagePlayButton')" class="watch-btn">Watch Now</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="next-btn">Next →</button>
+    </div> -->
+  </div>
+  
+  <footer>
+    <div class="footer-content">
+      <div class="back-to-categories" onclick="window.location.href='type.html'">
+        ← Back to Categories
+      </div>
+      <p>&copy; 2025 Movie Night. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Redirect function
+    function redirectTo(url) {
+      window.open(url, "_blank");
+    }
+    
+    // Movie details modal
+    function showMovieDetails(movieId) {
+      const modal = document.getElementById('movie-details-modal');
+      modal.style.display = 'flex';
+      
+      // In a real application, you would fetch movie details based on the movieId
+      // For demo purposes, we'll just show placeholder content
+      document.getElementById('modal-title').textContent = event.currentTarget.querySelector('h4').textContent;
+      document.getElementById('modal-image').src = event.currentTarget.querySelector('img').src;
+      document.getElementById('modal-rating').textContent = event.currentTarget.querySelector('.rating').textContent;
+      document.getElementById('modal-description').textContent = event.currentTarget.querySelector('.description').textContent;
+      document.getElementById('modal-year').textContent = 'Year: ' + event.currentTarget.querySelector('.year').textContent;
+    }
+    
+    // Close modal when clicking the close button
+    document.querySelector('.close-btn').addEventListener('click', function() {
+      document.getElementById('movie-details-modal').style.display = 'none';
+    });
+    
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('movie-details-modal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+    
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Search functionality
+    document.getElementById('searchBtn').addEventListener('click', function() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      document.querySelectorAll('.card').forEach(card => {
+        const title = card.querySelector('h4').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+    
+    // Run search on Enter key press
+    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+      if (event.key === 'Enter') {
+        document.getElementById('searchBtn').click();
+      }
+    });
+    
+    // Add page load animation
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>

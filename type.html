@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Categories | Choose Your Experience</title>
+  <link rel="stylesheet" href="type.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="background-overlay"></div>
+  
+  <div class="container">
+    <h3>Select the type of movie you want to watch with me</h3>
+    
+    <div class="card-container">
+      <div class="card" onclick="redirectTo('comedy.html')">
+        <div class="card-image-wrapper">
+          <img src="images/comedy" alt="Comedy Movies">
+          <div class="card-overlay">
+            <span class="view-btn">View Selection</span>
+          </div>
+        </div>
+        <h4>Comedy</h4>
+        <p class="card-description">Laugh out loud with hilarious comedies</p>
+      </div>
+      
+      <div class="card" onclick="redirectTo('horror.html')">
+        <div class="card-image-wrapper">
+          <img src="images/horror" alt="Horror Movies">
+          <div class="card-overlay">
+            <span class="view-btn">View Selection</span>
+          </div>
+        </div>
+        <h4>Horror</h4>
+        <p class="card-description">Terrifying tales to keep you on edge</p>
+      </div>
+      
+      <div class="card" onclick="redirectTo('thriller.html')">
+        <div class="card-image-wrapper">
+          <img src="images/thriller" alt="Thriller Movies">
+          <div class="card-overlay">
+            <span class="view-btn">View Selection</span>
+          </div>
+        </div>
+        <h4>Thriller</h4>
+        <p class="card-description">Suspenseful stories that thrill and excite</p>
+      </div>
+      
+      <div class="card" onclick="redirectTo('sci-fi.html')">
+        <div class="card-image-wrapper">
+          <img src="images/sci-fi" alt="Science Fiction Movies">
+          <div class="card-overlay">
+            <span class="view-btn">View Selection</span>
+          </div>
+        </div>
+        <h4>Sci-Fi</h4>
+        <p class="card-description">Journeys beyond our world and imagination</p>
+      </div>
+      
+      <div class="card" onclick="redirectTo('documentary.html')">
+        <div class="card-image-wrapper">
+          <img src="images/documentary" alt="Documentary Films">
+          <div class="card-overlay">
+            <span class="view-btn">View Selection</span>
+          </div>
+        </div>
+        <h4>Documentary</h4>
+        <p class="card-description">Real stories that inform and inspire</p>
+      </div>
+      
+      <div class="card" onclick="redirectTo('romance.html')">
+        <div class="card-image-wrapper">
+          <img src="images/romance" alt="Romance Movies">
+          <div class="card-overlay">
+            <span class="view-btn">View Selection</span>
+          </div>
+        </div>
+        <h4>Romance</h4>
+        <p class="card-description">Heart-warming tales of love and connection</p>
+      </div>
+    </div>
+    
+    <div class="back-button" onclick="window.history.back()">
+      <span class="back-icon">←</span> Back to Invitation
+    </div>
+  </div>
+
+  <script>
+    function redirectTo(page) {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.classList.remove('active');
+        if(card.querySelector('h4').textContent.toLowerCase() === page.split('.')[0]) {
+          card.classList.add('active');
+        }
+      });
+      
+      setTimeout(() => {
+        window.open(page, "_blank");
+      }, 500);
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+      
+      // Add animation delay to cards
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>
